@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pasek.controllers.DashboardController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="128.0" minHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="352.0" minHeight="10.0" prefHeight="352.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button fx:id="logout" mnemonicParsing="false" onAction="#lougoutButton" prefHeight="27.0" prefWidth="169.0" text="Vypnout program" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets left="100.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="addUser" mnemonicParsing="false" onAction="#addNewUser" text="Přidat nového uživatele" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="250.0" />
+         </GridPane.margin>
+      </Button>
+      <TableView fx:id="tableview" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="55.0" text="Jméno" />
+          <TableColumn fx:id="colEmail" prefWidth="119.0" text="Email" />
+          <TableColumn fx:id="colPass" prefWidth="125.0" text="Heslo" />
+        </columns>
+      </TableView>
+      <Button fx:id="delUser" mnemonicParsing="false" onAction="#deleteUser" text="Smazat uživatele" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="150.0" />
+         </GridPane.margin>
+      </Button>
+   </children>
+</GridPane>
