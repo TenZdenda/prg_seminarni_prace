@@ -21,13 +21,11 @@ public class deleteUserController {
         PersonImpl pi = new PersonImpl();
         Person verifyP = pi.selectedById(email);
 
-        if(!email.equals(verifyP.getEmail())){
-            newScene ns = new newScene();
-            ns.newScene("../FXML/dashboard.fxml", event);
-            return;
+        if(!email.isEmpty()){
+            if(email.equals(verifyP.getEmail())){
+                pi.delete(email);
+            }
         }
-
-        pi.delete(email);
 
         newScene ns = new newScene();
         ns.newScene("../FXML/dashboard.fxml", event);

@@ -30,15 +30,18 @@ public class AddDialogController {
 
         Person verifyP = pi.selectedById(email);
 
-        if(user_name.getText().isEmpty() || user_email.getText().isEmpty() || user_pass.getText().isEmpty() || email.equals(verifyP.getEmail())){
+        if(!user_name.getText().isEmpty() || !user_email.getText().isEmpty() || !user_pass.getText().isEmpty() || !email.equals(verifyP.getEmail())){
             newScene ns = new newScene();
             ns.newScene("../FXML/dashboard.fxml", event);
             return;
         }
 
         Person person = new Person(name, email, pass);
-
         pi.insert(person);
+
+        newScene ns = new newScene();
+        ns.newScene("../FXML/dashboard.fxml", event);
+        return;
     }
 
 
