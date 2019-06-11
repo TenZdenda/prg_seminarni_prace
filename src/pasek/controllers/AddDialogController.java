@@ -32,7 +32,7 @@ public class AddDialogController {
 
         if(user_name.getText().isEmpty() || user_email.getText().isEmpty() || user_pass.getText().isEmpty() || email.equals(verifyP.getEmail())){
             newScene ns = new newScene();
-            ns.newScene("dashboard.fxml", event);
+            ns.newScene("../FXML/dashboard.fxml", event);
             return;
         }
 

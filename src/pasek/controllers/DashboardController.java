@@ -65,11 +65,11 @@ public class DashboardController implements Initializable {
 
     public void addNewUser(ActionEvent event) throws IOException {
         newScene ns = new newScene();
-        ns.newScene("addNewUserDiagram.fxml", event);
+        ns.newScene("../FXML/addNewUserDiagram.fxml", event);
     }
 
     public void deleteUser(ActionEvent event) throws IOException {
         newScene ns = new newScene();
-        ns.newScene("deleteUser.fxml", event);
+        ns.newScene("../FXML/deleteUser.fxml", event);
     }
 }

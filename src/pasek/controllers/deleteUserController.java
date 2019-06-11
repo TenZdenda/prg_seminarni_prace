@@ -23,14 +23,14 @@ public class deleteUserController {
 
         if(!email.equals(verifyP.getEmail())){
             newScene ns = new newScene();
-            ns.newScene("dashboard.fxml", event);
+            ns.newScene("../FXML/dashboard.fxml", event);
             return;
         }
 
         pi.delete(email);
 
         newScene ns = new newScene();
-        ns.newScene("dashboard.fxml", event);
+        ns.newScene("../FXML/dashboard.fxml", event);
         return;
     }
 

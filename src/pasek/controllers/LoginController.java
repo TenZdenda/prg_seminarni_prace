@@ -35,7 +35,7 @@ public class LoginController {
         // Ověřování hesla
         if(heslo.equals(person.getPass())){
             newScene ns = new newScene();
-            newScene.newScene("dashboard.fxml", event);
+            newScene.newScene("../FXML/dashboard.fxml", event);
         } else{
             error.setText("Hesla se neschodují!");
             return;
